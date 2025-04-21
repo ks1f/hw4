@@ -1,24 +1,28 @@
 function equation (){
 
-    const firstNum = prompt("Enter first number");
-    if (isNaN(Number(firstNum))) {
+    let firstNum = prompt("Enter first number");
+    firstNum = Number(firstNum);
+    if (isNaN(firstNum)) {
         alert("Its not a number :facepalm:");
         equation();
+        return;
     }
+
 
     const operation = prompt("Enter operation (+ , - , * , /)");
 
 
-    const secondNum = prompt("Enter second number");
-    if (isNaN(Number(secondNum))) {
+        let secondNum = prompt("Enter second number");
+    secondNum = Number(secondNum);
+    if (isNaN(secondNum)) {
         alert("Its not a number :facepalm:");
+        equation();
         return;
     }
 
     let solution;
 
     if (operation === "+") {
-
         solution = firstNum + secondNum ;
     }
     else if (operation === "-") {
